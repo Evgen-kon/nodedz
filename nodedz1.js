@@ -21,7 +21,7 @@ const server = http.createServer((req,res)=>
     }
 });
 server.listen(3000);
-let a = 0;
+let a = 1;
 function counter(){
     let n=1;
      return function schet(){
