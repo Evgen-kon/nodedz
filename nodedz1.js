@@ -7,7 +7,7 @@ const server = http.createServer((req,res)=>
             'Content-Type':'text/html; charset=UTF-8',
 
         });
-        res.end(`<a href = "/about">Другая страница</a><br /><h1>Количество загрузок = ${count1()}</h1>`);
+        res.end(`<a href = "/about">Другая страница</a><br /><h1>Количество загрузок = ${a++}</h1>`);
     }
     else if(req.url =='/about') {
         res.writeHead(200,{
@@ -21,6 +21,7 @@ const server = http.createServer((req,res)=>
     }
 });
 server.listen(3000);
+let a = 0;
 function counter(){
     let n=1;
      return function schet(){
