@@ -15,6 +15,10 @@ const server = http.createServer((req,res)=>
         });
         res.end(`<a href = "/">Главная страница</a><br /><h1>Количество загрузок = ${count2()}</h1>`);
     }
+    else{
+        res.writeHead(404,{'Content-Type':'text/html; charset=UTF-8',});
+        res.end("<h1>Страницы не существует</h1>");
+    }
 });
 server.listen(3000);
 function counter(){
